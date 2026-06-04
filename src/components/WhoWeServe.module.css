@@ -1,0 +1,84 @@
+.serveSection {
+  background:
+    linear-gradient(90deg, rgba(35, 31, 32, 0.32), rgba(0, 53, 86, 0.22)),
+    transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.serveSection::before {
+  content: '';
+  position: absolute;
+  inset: 18% 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(142, 217, 255, 0.36), transparent);
+  z-index: 0;
+}
+
+.serveContainer {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  font-size: 3.35rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: var(--color-text-dim);
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.listContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.serveItem {
+  display: flex;
+  align-items: center;
+  min-height: 76px;
+  padding: 1.35rem 1.5rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.checkIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background-color: rgba(142, 217, 255, 0.12);
+  color: var(--color-light-blue);
+  margin-right: 1.25rem;
+  flex-shrink: 0;
+}
+
+.checkIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 992px) {
+  .serveContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.4rem;
+  }
+}

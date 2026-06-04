@@ -1,0 +1,80 @@
+.footer {
+  background-color: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 5rem 0 2rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footerBrand img {
+  margin-bottom: 1.5rem;
+}
+
+.footerText {
+  color: var(--color-text-dim);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.association {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.assocText {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footerLinks h4 {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footerLinks ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footerLinks a, .footerLinks li {
+  color: var(--color-text-dim);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  font-size: 1rem;
+}
+
+.footerLinks a:hover {
+  color: var(--color-light-blue);
+}
+
+.footerBottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

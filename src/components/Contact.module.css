@@ -1,0 +1,176 @@
+.contactSection {
+  background:
+    linear-gradient(180deg, rgba(0, 53, 86, 0), rgba(35, 31, 32, 0.26)),
+    transparent;
+  position: relative;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.heading {
+  font-size: 3.35rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.subheading {
+  color: var(--color-text-dim);
+  font-size: 1.15rem;
+  margin-bottom: 2.6rem;
+  line-height: 1.6;
+  max-width: 620px;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  background: rgba(142, 217, 255, 0.1);
+  border: 1px solid rgba(142, 217, 255, 0.22);
+  color: var(--color-light-blue);
+  flex-shrink: 0;
+}
+
+.icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.infoItem p {
+  color: var(--color-text-dim);
+  margin-bottom: 0.25rem;
+}
+
+.infoItem p strong {
+  color: var(--color-white);
+}
+
+.contactPanel {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem;
+}
+
+.contactPanel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-light-blue), var(--color-accent));
+}
+
+.panelLabel {
+  color: var(--color-light-blue);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.panelTitle {
+  font-size: 2.05rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.panelText {
+  color: var(--color-text-dim);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.quickLinks {
+  display: flex;
+  gap: 0.9rem;
+  margin-bottom: 2.4rem;
+}
+
+.quickLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(142, 217, 255, 0.24);
+  background: rgba(142, 217, 255, 0.09);
+  color: var(--color-light-blue);
+  transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.quickLink:hover,
+.quickLink:focus-visible {
+  transform: translateY(-3px);
+  background: rgba(40, 171, 227, 0.16);
+  border-color: rgba(142, 217, 255, 0.52);
+  outline: none;
+}
+
+.quickLink svg {
+  width: 23px;
+  height: 23px;
+}
+
+.metaList {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.metaList div {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(142, 217, 255, 0.13);
+}
+
+.metaList dt {
+  color: var(--color-white);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.metaList dd {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contactPanel {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.4rem;
+  }
+
+  .contactPanel {
+    padding: 2rem 1.5rem;
+  }
+}

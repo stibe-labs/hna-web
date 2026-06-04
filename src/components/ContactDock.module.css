@@ -1,0 +1,115 @@
+.dock {
+  position: fixed;
+  right: 1.35rem;
+  bottom: 2rem;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.action {
+  --color-white: #ffffff;
+  position: relative;
+  display: inline-flex;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: rgba(6, 22, 34, 0.82);
+  color: var(--color-white);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.action svg {
+  width: 23px;
+  height: 23px;
+}
+
+.action::before {
+  content: attr(data-label);
+  position: absolute;
+  right: calc(100% + 0.75rem);
+  top: 50%;
+  max-width: 120px;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(6, 22, 34, 0.9);
+  color: var(--color-white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(8px, -50%);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.action:hover,
+.action:focus-visible {
+  transform: translateX(-4px) scale(1.04);
+  border-color: rgba(142, 217, 255, 0.55);
+  background: rgba(8, 38, 58, 0.92);
+  box-shadow: 0 16px 36px rgba(40, 171, 227, 0.24);
+  outline: none;
+}
+
+.action:hover::before,
+.action:focus-visible::before {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.call {
+  color: var(--color-light-blue);
+}
+
+.email {
+  color: var(--color-accent);
+}
+
+.whatsapp {
+  color: #25d366;
+}
+
+@media (max-width: 768px) {
+  .dock {
+    top: auto;
+    right: 1rem;
+    bottom: 1rem;
+    flex-direction: row;
+    transform: none;
+  }
+
+  .action {
+    width: 48px;
+    height: 48px;
+  }
+
+  .action svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .action::before {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .dock {
+    right: 0.75rem;
+    gap: 0.45rem;
+  }
+
+  .action {
+    width: 44px;
+    height: 44px;
+  }
+}
