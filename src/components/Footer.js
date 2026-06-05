@@ -16,7 +16,7 @@ export default function Footer() {
             </p>
             <div className={styles.association}>
               <span className={styles.assocText}>In association with</span>
-              <Image src="/Stibe-logo.png" alt="Stibe Logo" width={420} height={140} style={{ objectFit: 'contain', objectPosition: 'left center', marginLeft: '-45px', marginTop: '-20px' }} />
+              <Image src="/Stibe-logo.png" alt="Stibe Logo" width={200} height={66} style={{ objectFit: 'contain', objectPosition: 'left center', marginLeft: '-20px', marginTop: '-10px' }} />
             </div>
           </div>
           
