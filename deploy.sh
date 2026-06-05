@@ -7,7 +7,7 @@ set -e
 SERVER="root@187.127.147.191"
 REMOTE_REPO="/var/www/hna-repo"
 REMOTE_APP="$REMOTE_REPO/hna-website"
-PORT=3002
+PORT=3030
 PM2_APP_NAME="hna-website"
 
 echo "📥 Pulling latest code from GitHub..."

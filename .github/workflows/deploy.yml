@@ -22,4 +22,4 @@ jobs:
             cd hna-website
             npm install
             npm run build
-            PORT=3002 pm2 restart hna-website --update-env || PORT=3002 pm2 start npm --name "hna-website" -- start
+            PORT=3030 pm2 restart hna-website --update-env || PORT=3030 pm2 start npm --name "hna-website" -- start
