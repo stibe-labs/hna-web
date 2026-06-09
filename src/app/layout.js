@@ -15,6 +15,9 @@ export const metadata = {
   title: "HNA | Your Complete Business & Financial Partner",
   description: "Holistic Network of Accounting (HNA) LLP provides integrated accounting, taxation, compliance, outsourcing, and technology solutions in Ernakulam, Kerala.",
   keywords: "Accounting, Bookkeeping, Tax Consulting, GST, BPO, Financial Management, Ernakulam, Kerala",
+  icons: {
+    icon: "/hna.webp",
+  },
 };
 
 export default function RootLayout({ children }) {
