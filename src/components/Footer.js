@@ -14,10 +14,6 @@ export default function Footer() {
               Holistic Network of Accounting LLP<br />
               Your complete business and financial partner.
             </p>
-            <div className={styles.association}>
-              <span className={styles.assocText}>In association with</span>
-              <Image src="/Stibe-logo.png" alt="Stibe Logo" width={200} height={66} style={{ objectFit: 'contain', objectPosition: 'left center', marginLeft: '-20px', marginTop: '-10px' }} />
-            </div>
           </div>
           
           <div className={styles.footerLinks}>

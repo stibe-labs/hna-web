@@ -21,24 +21,6 @@
   line-height: 1.6;
 }
 
-.association {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.assocText {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
 .footerLinks h4 {
   color: var(--color-white);
   font-size: 1.2rem;
