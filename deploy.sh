@@ -5,13 +5,12 @@
 set -e
 
 SERVER="root@187.127.147.191"
-REMOTE_REPO="/var/www/hna-repo"
-REMOTE_APP="$REMOTE_REPO/hna-website"
+REMOTE_APP="/var/www/hna-repo/hna-website"
 PORT=3030
 PM2_APP_NAME="hna-website"
 
 echo "📥 Pulling latest code from GitHub..."
-ssh "$SERVER" "cd $REMOTE_REPO && git pull origin main"
+ssh "$SERVER" "cd $REMOTE_APP && git pull origin main"
 
 echo "📦 Installing dependencies on server..."
 ssh "$SERVER" "cd $REMOTE_APP && npm install"
