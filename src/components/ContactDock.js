@@ -10,7 +10,7 @@ const contactLinks = [
   },
   {
     label: 'Email',
-    href: 'mailto:info@hnatax.in',
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=info@hnatax.in',
     className: styles.email,
     icon: MailIcon,
   },

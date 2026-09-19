@@ -49,6 +49,24 @@
   border: 1px solid rgba(142, 217, 255, 0.22);
   color: var(--color-light-blue);
   flex-shrink: 0;
+  transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.clickableIcon:hover {
+  transform: translateY(-2px);
+  background: rgba(40, 171, 227, 0.2);
+  border-color: rgba(142, 217, 255, 0.5);
+}
+
+.infoLink {
+  color: var(--color-text-dim);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.infoLink:hover {
+  color: var(--color-light-blue);
+  text-decoration: underline;
 }
 
 .icon svg {

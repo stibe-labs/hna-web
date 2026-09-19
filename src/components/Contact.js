@@ -6,17 +6,27 @@ const infoItems = [
   {
     label: 'Phone',
     icon: PhoneIcon,
-    lines: ['+91 80756 50719', '+91 75588 08911'],
+    href: 'tel:+918075650719',
+    lines: [
+      { text: '+91 80756 50719', href: 'tel:+918075650719' },
+      { text: '+91 75588 08911', href: 'tel:+917558808911' },
+    ],
   },
   {
     label: 'Email',
     icon: MailIcon,
-    lines: ['info@hnatax.in'],
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=info@hnatax.in',
+    lines: [
+      { text: 'info@hnatax.in', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=info@hnatax.in' },
+    ],
   },
   {
     label: 'Location',
     icon: MapPinIcon,
-    lines: ['Kaloor, SRM Road', 'Ernakulam, Kerala 682018'],
+    lines: [
+      { text: 'Kaloor, SRM Road' },
+      { text: 'Ernakulam, Kerala 682018' },
+    ],
   },
 ];
 
@@ -28,7 +38,7 @@ const quickLinks = [
   },
   {
     label: 'Email',
-    href: 'mailto:info@hnatax.in',
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=info@hnatax.in',
     icon: MailIcon,
   },
   {
@@ -56,13 +66,38 @@ export default function Contact() {
 
                 return (
                   <FadeIn key={item.label} direction="up" delay={idx * 150} className={styles.infoItem}>
-                    <div className={styles.icon}>
-                      <Icon />
-                    </div>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target={item.href.startsWith('http') ? '_blank' : undefined}
+                        rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        className={`${styles.icon} ${styles.clickableIcon}`}
+                        aria-label={item.label}
+                      >
+                        <Icon />
+                      </a>
+                    ) : (
+                      <div className={styles.icon}>
+                        <Icon />
+                      </div>
+                    )}
                     <div>
                       <p><strong>{item.label}</strong></p>
-                      {item.lines.map((line) => (
-                        <p key={line}>{line}</p>
+                      {item.lines.map((line, lIdx) => (
+                        line.href ? (
+                          <p key={lIdx}>
+                            <a
+                              href={line.href}
+                              target={line.href.startsWith('http') ? '_blank' : undefined}
+                              rel={line.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                              className={styles.infoLink}
+                            >
+                              {line.text}
+                            </a>
+                          </p>
+                        ) : (
+                          <p key={lIdx}>{line.text}</p>
+                        )
                       ))}
                     </div>
                   </FadeIn>

@@ -23,7 +23,7 @@ export default function Navbar() {
       } else if (currentScrollY < lastScrollY) {
         setHidden(false);
       }
-      
+
       lastScrollY = currentScrollY;
     };
 
@@ -38,7 +38,7 @@ export default function Navbar() {
           <Link href="/" className={styles.logo}>
             <Image src="/logo-clean.webp" alt="HNA Logo" width={150} height={40} style={{ objectFit: 'contain' }} />
           </Link>
-          
+
           <div className={`${styles.navLinks} ${menuOpen ? styles.open : ''}`}>
             <Link href="#about" onClick={() => setMenuOpen(false)}>About</Link>
             <Link href="#services" onClick={() => setMenuOpen(false)}>Services</Link>
@@ -48,8 +48,8 @@ export default function Navbar() {
           </div>
 
           <div className={styles.navActions}>
-            <button 
-              className={styles.mobileToggle} 
+            <button
+              className={styles.mobileToggle}
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
               aria-expanded={menuOpen}

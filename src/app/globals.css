@@ -78,7 +78,7 @@ button {
   --color-text-dim: rgba(255, 255, 255, 0.74);
   --color-text-muted: rgba(214, 213, 213, 0.62);
   --color-light-blue: #8ed9ff;
-  
+
   background: var(--glass-bg);
   color: var(--color-white);
   backdrop-filter: blur(12px);
@@ -91,7 +91,8 @@ button {
 
 .glass:hover {
   border-color: var(--glass-border-hover);
-  background: #0d2c42; /* Solid dark color to preserve contrast on hover */
+  background: #0d2c42;
+  /* Solid dark color to preserve contrast on hover */
   transform: translateY(-8px) !important;
   box-shadow: 0 32px 90px rgba(0, 0, 0, 0.25);
 }

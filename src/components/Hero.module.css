@@ -19,7 +19,8 @@
   background-position: right center;
   mask-image: linear-gradient(to right, transparent 0%, transparent 45%, black 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 45%, black 100%);
-  opacity: 1; /* Fully visible on the right side */
+  opacity: 1;
+  /* Fully visible on the right side */
   pointer-events: none;
 }
 
