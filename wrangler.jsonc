@@ -1,11 +1,17 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "hna-website",
+  "account_id": "c6efb78d2fb1a5cd19f2c9f16f6e821e",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-08-17",
   "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
-  }
+  },
+  "routes": [
+    { "pattern": "hnatax.in", "custom_domain": true },
+    { "pattern": "www.hnatax.in/*", "zone_name": "hnatax.in" }
+  ]
 }
